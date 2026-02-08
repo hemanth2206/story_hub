@@ -1,50 +1,46 @@
-# Story Hub
+Story Hub
 
 A full-stack story platform where readers can browse and comment, writers can publish and edit articles, and admins can manage users.
 
-## Features
-- Role-based flows for readers, writers, and admins
-- Clerk authentication on the frontend
-- Article publish, edit, soft delete/restore, and comments
-- Admin login and user block/unblock
-- MongoDB persistence with Mongoose
+Features
 
-## Tech Stack
-- Frontend: React + Vite, Clerk, React Router, Bootstrap
-- Backend: Node.js, Express, MongoDB, Mongoose, JWT
+Role-based flows for readers, writers, and admins
+Clerk authentication on the frontend
+Article publish, edit, soft delete/restore, and comments
+Admin login and user block/unblock
+MongoDB persistence with Mongoose
+Tech Stack
 
-## Project Structure
-- Frontend: client
-- Backend: server
+Frontend: React + Vite, Clerk, React Router, Bootstrap
+Backend: Node.js, Express, MongoDB, Mongoose, JWT
+Project Structure
 
-## Environment Variables
+Frontend: client
+Backend: server
+Environment Variables
 
 Frontend:
-- VITE_CLERK_PUBLISHABLE_KEY
 
+VITE_CLERK_PUBLISHABLE_KEY
 Backend:
-- DBURL
-- PORT (set to 3000 or update client API URLs)
-- JWT_SECRET
-- ADMIN_EMAIL
-- ADMIN_PASSWORD_HASH
-- CLERK_SECRET_KEY
 
-## Setup
+DBURL
+PORT (set to 3000 or update client API URLs)
+JWT_SECRET
+ADMIN_EMAIL
+ADMIN_PASSWORD_HASH
+CLERK_SECRET_KEY
+Setup
 
-### Frontend
-```bash
+Frontend
 cd client
 npm install
 npm run dev
 
-
-##Backend
+Backend
 cd server
 npm install
-node [server.js](http://_vscodecontentref_/0)
-
-
+node server.js
 
 Admin Setup
 Generate a password hash with server/hashAdminPassword.js, then set ADMIN_PASSWORD_HASH in your backend environment variables. Change the hardcoded password string before running in any real environment.
@@ -72,8 +68,5 @@ PUT /admin-api/toggle-block/:id
 Misc:
 
 POST /check-blocked
-
-
-
 Notes
-The client currently calls the API at http://localhost:3000. Keep the backend on port 3000, or update the client API URLs if you choose a different port. ``````
+The client currently calls the API at http://localhost:3000. Keep the backend on port 3000, or update the client API URLs if you choose a different port.
